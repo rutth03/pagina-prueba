@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermanos Jota — Muebles atemporales</title>
+    <meta name="description" content="Mueblería de Buenos Aires. Diseño atemporal y sustentable, hecho a oficio en madera noble.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html" aria-label="Hermanos Jota, inicio">
+          <!-- <span class="logo__mark">hj</span>
+          <span class="logo__slash" aria-hidden="true">/</span> -->
+          <img src="./Images/logo.svg" alt="" class="logo__img">
+          <span class="logo__name">Hermanos Jota</span>
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-principal">
+          <span></span><span></span><span></span>
+          <span class="visually-hidden" style="position:absolute;left:-9999px">Abrir menú</span>
+        </button>
+        <nav class="site-nav" id="menu-principal" data-nav aria-label="Principal">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Catálogo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="cart-button" type="button" data-open-cart aria-label="Abrir carrito">
+            Carrito
+            <span class="cart-count" data-cart-count hidden>0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-content">
+          <p class="eyebrow">Buenos Aires · desde 1982</p>
+          <h1 id="hero-title">Muebles que se quedan</h1>
+          <p>Diseño atemporal y madera de origen responsable. Piezas para habitar despacio, hechas en el taller de Hermanos Jota.</p>
+          <a class="btn btn-gold" href="productos.html">Ver catálogo</a>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="oficio-title">
+        <div class="container">
+          <div class="section-head">
+            <p class="kicker">Sustentabilidad</p>
+            <h2 id="oficio-title">Oficio, no moda</h2>
+            <p class="intro">Trabajamos maderas certificadas, aceites naturales y herrajes pensados para durar décadas. Cada pieza se puede restaurar; ninguna está hecha para desecharse.</p>
+          </div>
+          <div class="story-grid">
+            <article class="story-card">
+              <div class="leaf" aria-hidden="true">01</div>
+              <h3>Madera noble</h3>
+              <p>Nogal, roble, paraíso y guatambú de proveedores con cadena de custodia. El veteado queda a la vista: no hay dos iguales.</p>
+            </article>
+            <article class="story-card">
+              <div class="leaf" aria-hidden="true">02</div>
+              <h3>Acabados limpios</h3>
+              <p>Aceites de tung y linaza, lacas al agua y ceras vegetales. Menos VOC, más tacto y un envejecimiento honesto.</p>
+            </article>
+            <article class="story-card">
+              <div class="leaf" aria-hidden="true">03</div>
+              <h3>Hecho en CABA</h3>
+              <p>Taller y showroom en San Juan y Boedo. Podés ver las piezas, preguntar por medidas a medida y llevarte muestras de madera.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0" aria-labelledby="destacados-title">
+        <div class="container">
+          <div class="section-head">
+            <p class="kicker">Selección</p>
+            <h2 id="destacados-title">Piezas destacadas</h2>
+          </div>
+          <div class="loader" data-loader hidden>
+            <div class="spinner" aria-hidden="true"></div>
+            <p>Cargando el taller…</p>
+          </div>
+          <div class="product-grid" data-featured-grid></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <h2><img src="./Images/logo.svg" alt="" class="logo__img"> Hermanos Jota</h2>
+          <p>Mueblería de diseño atemporal y sustentable. Showroom abierto de martes a sábado.</p>
+        </section>
+        <section>
+          <h3>Showroom</h3>
+          <p>Av. San Juan 2847, CABA<br>info@hermanosjota.com.ar</p>
+        </section>
+        <section>
+          <h3>Redes</h3>
+          <p class="socials">
+            <a href="https://instagram.com/hermanosjota_ba" rel="noopener noreferrer" target="_blank">@hermanosjota_ba</a>
+          </p>
+        </section>
+      </div>
+      <div class="container legal">
+        <p>© 2026 Hermanos Jota. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <div class="cart-overlay" data-cart-overlay></div>
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="Carrito">
+      <header>
+        <h2>Carrito</h2>
+        <button class="icon-btn" type="button" data-close-cart aria-label="Cerrar carrito">×</button>
+      </header>
+      <ul data-cart-list></ul>
+      <footer>
+        <p>Total <strong data-cart-total>$ 0</strong></p>
+        <a class="btn btn-primary" href="contacto.html">Consultar pedido</a>
+      </footer>
+    </aside>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

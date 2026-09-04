@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo — Hermanos Jota</title>
+    <meta name="description" content="Catálogo completo de muebles Hermanos Jota: aparadores, mesas, sillas y más.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html" aria-label="Hermanos Jota, inicio">
+          <span class="logo__mark">hj</span>
+          <span class="logo__slash" aria-hidden="true">/</span>
+          <span class="logo__name">Hermanos Jota</span>
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-principal">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="menu-principal" data-nav aria-label="Principal">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Catálogo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="cart-button" type="button" data-open-cart aria-label="Abrir carrito">
+            Carrito
+            <span class="cart-count" data-cart-count hidden>0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <header class="page-hero container">
+        <p class="kicker">Catálogo</p>
+        <h1>Todas las piezas</h1>
+        <p class="intro">Once diseños de línea, listos para el showroom o para adaptar a medida.</p>
+      </header>
+
+      <section class="section" style="padding-top:1.5rem" aria-labelledby="catalogo-title">
+        <div class="container">
+          <h2 id="catalogo-title" class="visually-hidden" style="position:absolute;left:-9999px">Listado de productos</h2>
+          <div class="catalog-toolbar">
+            <label class="search-field">
+              Buscar por nombre
+              <input type="search" data-product-search placeholder="Ej. Sofá Patagonia" autocomplete="off">
+            </label>
+            <p class="muted" data-result-count></p>
+          </div>
+          <div class="loader" data-loader>
+            <div class="spinner" role="status" aria-label="Cargando productos"></div>
+            <p>Trayendo el catálogo…</p>
+          </div>
+          <div class="product-grid catalog" data-catalog-grid></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <h2>hj / Hermanos Jota</h2>
+          <p>Mueblería de diseño atemporal y sustentable. Showroom abierto de martes a sábado.</p>
+        </section>
+        <section>
+          <h3>Showroom</h3>
+          <p>Av. San Juan 2847, CABA<br>info@hermanosjota.com.ar</p>
+        </section>
+        <section>
+          <h3>Redes</h3>
+          <p class="socials">
+            <a href="https://instagram.com/hermanosjota_ba" rel="noopener noreferrer" target="_blank">@hermanosjota_ba</a>
+          </p>
+        </section>
+      </div>
+      <div class="container legal">
+        <p>© 2026 Hermanos Jota. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <div class="cart-overlay" data-cart-overlay></div>
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="Carrito">
+      <header>
+        <h2>Carrito</h2>
+        <button class="icon-btn" type="button" data-close-cart aria-label="Cerrar carrito">×</button>
+      </header>
+      <ul data-cart-list></ul>
+      <footer>
+        <p>Total <strong data-cart-total>$ 0</strong></p>
+        <a class="btn btn-primary" href="contacto.html">Consultar pedido</a>
+      </footer>
+    </aside>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

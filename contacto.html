@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — Hermanos Jota</title>
+    <meta name="description" content="Showroom en Av. San Juan 2847, CABA. Escribinos o visitanos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html" aria-label="Hermanos Jota, inicio">
+          <!-- <span class="logo__mark">hj</span>
+          <span class="logo__slash" aria-hidden="true">/</span> -->
+          <img src="./Images/logo.svg" alt="" class="logo__img">
+          <span class="logo__name">Hermanos Jota</span>
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-principal">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="menu-principal" data-nav aria-label="Principal">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Catálogo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="cart-button" type="button" data-open-cart aria-label="Abrir carrito">
+            Carrito
+            <span class="cart-count" data-cart-count hidden>0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <header class="page-hero container">
+        <p class="kicker">Contacto</p>
+        <h1>Visitá el taller</h1>
+        <p class="intro">El showroom está en Boedo. Traé medidas, muestras de tela o simplemente sentate en las piezas.</p>
+      </header>
+
+      <section class="section" style="padding-top:1.25rem">
+        <div class="container contact-layout">
+          <aside class="contact-card">
+            <h2>Showroom</h2>
+            <ul class="contact-list">
+              <li>
+                <strong>Dirección</strong><br>
+                Av. San Juan 2847, CABA
+              </li>
+              <li>
+                <strong>Email</strong><br>
+                <a href="mailto:info@hermanosjota.com.ar">info@hermanosjota.com.ar</a>
+              </li>
+              <li>
+                <strong>WhatsApp</strong><br>
+                <a href="https://wa.me/541145678900">+54 11 4567-8900</a>
+              </li>
+              <li>
+                <strong>Instagram</strong><br>
+                <a href="https://instagram.com/hermanosjota_ba" rel="noopener noreferrer" target="_blank">@hermanosjota_ba</a>
+              </li>
+              <li>
+                <strong>Horarios</strong><br>
+                Mar a vie 11–19 h · Sáb 11–16 h
+              </li>
+            </ul>
+            <p class="map-note">A metros de la estación Boedo del subte E. Hay cochera en la cuadra; también llegás en colectivo por San Juan o Directo.</p>
+          </aside>
+
+          <div class="form-card">
+            <h2>Escribinos</h2>
+            <div class="form-success" data-form-success hidden tabindex="-1"></div>
+            <form data-contact-form novalidate>
+              <div class="form-field">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+                <span class="error" data-error-for="nombre"></span>
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+                <span class="error" data-error-for="email"></span>
+              </div>
+              <div class="form-field">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" required placeholder="Contanos qué pieza te interesa o si querés una visita."></textarea>
+                <span class="error" data-error-for="mensaje"></span>
+              </div>
+              <button class="btn btn-primary" type="submit">Enviar consulta</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <h2>hj / Hermanos Jota</h2>
+          <p>Mueblería de diseño atemporal y sustentable. Showroom abierto de martes a sábado.</p>
+        </section>
+        <section>
+          <h3>Showroom</h3>
+          <p>Av. San Juan 2847, CABA<br>info@hermanosjota.com.ar</p>
+        </section>
+        <section>
+          <h3>Redes</h3>
+          <p class="socials">
+            <a href="https://instagram.com/hermanosjota_ba" rel="noopener noreferrer" target="_blank">@hermanosjota_ba</a>
+          </p>
+        </section>
+      </div>
+      <div class="container legal">
+        <p>© 2026 Hermanos Jota. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <div class="cart-overlay" data-cart-overlay></div>
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="Carrito">
+      <header>
+        <h2>Carrito</h2>
+        <button class="icon-btn" type="button" data-close-cart aria-label="Cerrar carrito">×</button>
+      </header>
+      <ul data-cart-list></ul>
+      <footer>
+        <p>Total <strong data-cart-total>$ 0</strong></p>
+        <a class="btn btn-primary" href="contacto.html">Consultar pedido</a>
+      </footer>
+    </aside>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
